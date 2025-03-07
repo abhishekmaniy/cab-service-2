@@ -26,7 +26,8 @@ export default function DriverDashboard () {
         socket.off('event:new_ride')
       }
     }
-  }, [socket])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [socket, setAvailabelRide])
 
   const toggleAvailability = async () => {
     setIsAvailable(!isAvailable)

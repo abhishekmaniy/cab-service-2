@@ -1,13 +1,13 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import { useLocationStore } from '@/app/store/mapStore'
 import { Button } from '@/components/ui/button'
 import useWebSocket from '@/hooks/useSocket'
 import { useAuth } from '@clerk/nextjs'
 import { Autocomplete } from '@react-google-maps/api'
-import { Input } from './ui/input'
-import { useLocationStore } from '@/app/store/mapStore'
+import { useRef, useState } from 'react'
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
+import { Input } from './ui/input'
 
 export default function RideRequest () {
   const [pickup, setPickup] = useState('')
